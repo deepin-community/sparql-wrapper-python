@@ -1,0 +1,21 @@
+#! /usr/bin/make -f
+
+# export DH_VERBOSE=1
+# export DH_OPTIONS=-v
+# export PYBUILD_VERBOSE=1
+# export NOSE_VERBOSE=2
+
+export PYBUILD_NAME=sparqlwrapper
+
+# copy the tests to the build dir to be able to pass nose
+export PYBUILD_AFTER_BUILD=cp -r test {build_dir}
+export PYBUILD_BEFORE_INSTALL=rm -fr {build_dir}/test
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	# sed command is a custom hack that's also present in upstream's run_tests_py3.sh script
+	PYBUILD_BEFORE_TEST_python3='cp -r {dir}/test {build_dir}; 2to3 -w {build_dir}/test; sed -i.sedbak -e "s/urllib2._opener/urllib.request._opener/g" {build_dir}/test/wrapper_test.py' \
+	PYBUILD_AFTER_TEST='rm -rf {build_dir}/test' \
+	#dh_auto_test --buildsystem=pybuild

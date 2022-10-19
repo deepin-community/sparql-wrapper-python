@@ -1,0 +1,32 @@
+Source: sparql-wrapper-python
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders:
+ Christian M. Amsüss <chrysn@fsfe.org>,
+Build-Depends:
+ 2to3,
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-nose,
+ python3-setuptools,
+ python3-rdflib
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/python-team/packages/sparql-wrapper-python.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/sparql-wrapper-python
+Homepage: https://rdflib.github.io/sparqlwrapper/
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-sparqlwrapper
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+Description: SPARQL endpoint interface to Python3
+ This is a wrapper around a SPARQL service. It helps in
+ creating the query URI and, possibly, convert the
+ result into a more manageable format.
+ .
+ This is the Python 3 version of the package.

@@ -1,0 +1,16 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Tue, 11 Jan 2022 15:19:25 +0100
+Bug-Debian: https://bugs.debian.org/997652
+Description: Do not use use_2to3 since it is deprecated
+
+--- a/setup.py
++++ b/setup.py
+@@ -75,8 +75,6 @@ setup(
+         'Topic :: Software Development :: Libraries :: Python Modules',
+       ],
+       keywords = ['python', 'sparql', 'rdf', 'rdflib'],
+-      use_2to3 = True,
+-      use_2to3_fixers = ['custom_fixers'],
+       project_urls={
+         'Home': 'https://rdflib.github.io/sparqlwrapper/',
+         'Documentation': 'https://rdflib.github.io/sparqlwrapper/doc/',

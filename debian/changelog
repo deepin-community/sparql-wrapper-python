@@ -1,0 +1,193 @@
+sparql-wrapper-python (1.8.5-2) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Python Team <team+python@tracker.debian.org>  Thu, 16 Jun 2022 14:31:57 +0800
+
+sparql-wrapper-python (1.8.5-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Bump debhelper from old 12 to 13.
+
+  [ Andreas Tille ]
+  * Standards-Version: 4.6.0 (routine-update)
+  * Add salsa-ci file (routine-update)
+  * No tab in license text (routine-update)
+  * watch file standard 4 (routine-update)
+  * Do not use use_2to3 since it is deprecated
+    Closes: #997652
+  * Fix autopkgtest-pkg-python
+
+ -- Andreas Tille <tille@debian.org>  Tue, 11 Jan 2022 15:23:08 +0100
+
+sparql-wrapper-python (1.8.5-1) unstable; urgency=medium
+
+  [ Emmanuel Arias ]
+  * Team upload
+  * New upstream version 1.8.5
+  * Remove Python 2 support (Closes: #938523)
+  * Remove patches already applied on upstream
+
+  [ Ondřej Nový ]
+  * Convert git repository from git-dpm to gbp layout.
+  * Bump Standards-Version to 4.4.0.
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * complete removal of python2 support
+  * debian/rules
+    - skip tests, they require network access
+  * debian/python3-sparqlwrapper.docs
+    - install README.rst
+
+ -- Sandro Tosi <morph@debian.org>  Mon, 16 Mar 2020 02:33:25 -0400
+
+sparql-wrapper-python (1.7.6-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control:
+    + Set Vcs-* to salsa.debian.org.
+    + Remove ancient X-Python-Version field.
+    + Remove ancient X-Python3-Version field.
+  * Convert git repository from git-dpm to gbp layout.
+
+  [ Mattia Rizzolo ]
+  * Run wrap-and-sort -ast.
+  * Drop obsolete debian/pyversions.
+  * d/control:
+    + Remove Olivier Berger from uploaders, as he has retired.
+      Thank you for your past contributions!  Closes: #917912
+    + Bump debhelper compat level to 12.
+    + Bump Standards-Version to 4.3.0.
+      - Set Rules-Requires-Root:no.
+    + Add Testsuite:autopkgtest-pkg-python.
+  * Install the README and the examples also in the python3 package.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Tue, 01 Jan 2019 11:07:53 +0100
+
+sparql-wrapper-python (1.7.6-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add the newly required build dependency on 2to3. (Closes: #884674)
+
+ -- Adrian Bunk <bunk@debian.org>  Fri, 20 Apr 2018 22:14:52 +0300
+
+sparql-wrapper-python (1.7.6-2) unstable; urgency=medium
+
+  * Demote keepalive to extra requirement (new patch, closes: #846871)
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Mon, 05 Dec 2016 19:32:51 +0100
+
+sparql-wrapper-python (1.7.6-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * Move packaging from SVN to Git
+  * Use DPMT as maintainer and real persons as Uploaders
+  * Enhance short description
+
+  [ Christian M. Amsüss ]
+  * New upstream release (Closes: #761177)
+  * Refresh copyright file.
+  * Run tests with python3 too (Closes: #761186)
+  * Drop pybuild nosetests workarounds
+  * Update standards-version to 3.9.8 (no changes)
+  * Update debhelper version to 10
+
+ -- Christian M. Amsüss <chrysn@fsfe.org>  Tue, 08 Nov 2016 15:23:39 +0100
+
+sparql-wrapper-python (1.6.0-2) unstable; urgency=low
+
+  * Uploading to unstable.
+  * Only pass tests once, and only for Python2 so far.
+
+ -- Olivier Berger <obergix@debian.org>  Sun, 25 May 2014 07:37:30 +0200
+
+sparql-wrapper-python (1.6.0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Olivier Berger <obergix@debian.org>  Sat, 17 May 2014 19:02:57 +0200
+
+sparql-wrapper-python (1.5.2-2) unstable; urgency=medium
+
+  * Uploading to unstable same package previously uploaded to
+    experimental's (1.5.2-1), now that 1.4.1-2 has transitioned to
+    testing.
+
+ -- Olivier Berger <obergix@debian.org>  Thu, 09 Jan 2014 13:13:36 +0100
+
+sparql-wrapper-python (1.5.2-1) experimental; urgency=medium
+
+  * New upstream version (Closes: #731361).
+  * Adopted (obergix), as part of DPMT.
+
+ -- Olivier Berger <obergix@debian.org>  Mon, 30 Dec 2013 15:53:30 +0100
+
+sparql-wrapper-python (1.4.1-2) unstable; urgency=low
+
+  * Acknowledge NMU. Merci, Olivier.
+  * Orphaned.
+   + Set maintainer to Debian QA Group <packages@qa.debian.org>
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Sun, 29 Dec 2013 18:45:02 +0000
+
+sparql-wrapper-python (1.4.1-1.2) unstable; urgency=medium
+
+  * NMU : Change fixed version requirement on rdflib for similar reasons
+    as in #731411.
+
+ -- Olivier Berger <obergix@debian.org>  Wed, 11 Dec 2013 15:35:57 +0100
+
+sparql-wrapper-python (1.4.1-1.1) unstable; urgency=low
+
+  * NMU : just rebuild with Python 2.7 which removes fixed dependency on
+    simplejson 2.0.9 in SPARQLWrapper-1.4.1.egg-info/requires.txt that was
+    just needed until Python 2.5 (Closes: #731411).
+
+ -- Olivier Berger <obergix@debian.org>  Wed, 11 Dec 2013 12:06:39 +0100
+
+sparql-wrapper-python (1.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to dpkg-source 3.0 (quilt) format
+  * debian/control
+   + Update standards-Version to 3.8.4 (no changes).
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Tue, 13 Apr 2010 16:40:33 +0200
+
+sparql-wrapper-python (1.3.2-1) unstable; urgency=low
+
+  * New upstream release (closes: #526026).
+  * debian/control
+   + Update standards-Version to 3.8.3 (no changes).
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Tue, 22 Sep 2009 17:39:28 +0200
+
+sparql-wrapper-python (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+   + b-d: Drop quilt, no longer needed.
+   + Set Standards-Version to 3.8.0 (no changes).
+  * Remove debian/patches
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Wed, 23 Jul 2008 12:45:18 +0200
+
+sparql-wrapper-python (1.1.0-1) unstable; urgency=low
+
+  * Initial release (closes: #469980)
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Mon, 24 Mar 2008 16:27:57 +0100
